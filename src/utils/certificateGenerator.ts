@@ -31,7 +31,7 @@ export const generateCertificateCanvas = async (
       fields.forEach((field) => {
         if (ctx && recipient[field.columnKey]) {
           const text = String(recipient[field.columnKey]);
-          const fontSizeOriginal = Math.round(field.fontSize * fontSizeRatio);
+          const fontSizeOriginal = field.fontSize * fontSizeRatio;
 
           let fontStyle = '';
           if (field.isBold) fontStyle += 'bold ';
