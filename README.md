@@ -137,7 +137,7 @@ npm run preview
 npm run lint
 ```
 
-### 🧑‍💻 Usage Guide
+### 💻 Usage Guide
 
 ### 1. Upload Recipient Data
 - Supported formats: **CSV, XLSX, XLS**
