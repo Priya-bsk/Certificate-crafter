@@ -155,12 +155,6 @@ certificate_2_Name2.png
 
 Invalid filename characters are sanitized automatically.
 
-## Implementation Notes
-
-- Field positions are stored in template natural-image coordinates, not display coordinates.
-- During generation, font sizing and positioning are scaled from layout display width to original image width.
-- This prevents misalignment between Step 3 design and final PNG output.
-
 ## Browser/Runtime Behavior
 
 - All processing is client-side in the browser.
