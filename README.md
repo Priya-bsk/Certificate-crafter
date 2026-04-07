@@ -134,9 +134,9 @@ Use column headers in the first row.
 Example CSV:
 
 ```csv
-Name,Course,Date,Grade
-Priya Sharma,Web Development,2026-04-01,A+
-Arun Mehta,Data Analytics,2026-04-01,A
+Name,Event,Date,Rank
+Name1,Data Analytics Hackathon,2026-04-01,1
+Name2,Data Analytics Hackathon,2026-04-01,2
 ```
 
 Notes:
