@@ -1,46 +1,76 @@
-﻿# Certificate Crafter
+# 🎓 Certificate Crafter
 
-A web app to generate personalized certificates in bulk.
+A modern web application for generating personalized certificates in bulk — quickly, accurately, and entirely in the browser.
 
-Certificate Crafter lets you:
-- upload recipient data from CSV/Excel,
-- upload a certificate template image,
-- map data columns to draggable text fields,
-- preview any recipient certificate,
-- export all certificates as high-quality PNG files in one ZIP download.
+**Certificate Crafter** eliminates manual certificate editing by allowing you to upload recipient data, design a template visually, and export high-quality certificates in a single click.
 
-## Features
+---
 
-- 5-step guided workflow:
-  - Data upload
-  - Template upload
-  - Layout design
-  - Preview
-  - Generate
-- CSV and Excel input support (`.csv`, `.xlsx`, `.xls`)
-- Drag-and-drop field placement on template
-- Field styling controls:
-  - font family
-  - font size
-  - color
-  - bold/italic
-  - left/center/right text alignment
-- Coordinate scaling system for consistent placement between on-screen layout and exported image
-- Batch export to ZIP (`certificates.zip`) with one PNG per recipient
+## 🚀 Overview
 
-## Tech Stack
+Certificate Crafter provides an intuitive, step-by-step workflow to:
 
-- React 18
-- TypeScript
-- Vite 5
-- Tailwind CSS
-- Lucide React (icons)
-- PapaParse (CSV parsing)
-- SheetJS/xlsx (Excel parsing)
-- JSZip + FileSaver (ZIP creation and download)
-- react-draggable (layout interaction)
+- Import recipient data from CSV or Excel files  
+- Upload a certificate template image  
+- Map data fields to draggable text elements  
+- Preview certificates dynamically  
+- Generate and download all certificates as PNG files in a ZIP archive  
 
-## Project Structure
+All processing is performed **client-side**, ensuring speed, privacy, and zero backend dependency.
+
+---
+
+## ✨ Features
+
+### 🧭 Guided Workflow
+A structured 5-step process:
+1. Data Upload  
+2. Template Upload  
+3. Layout Design  
+4. Preview  
+5. Generate  
+
+### 📂 Data Support
+- CSV (`.csv`)
+- Excel (`.xlsx`, `.xls`)
+- Automatic filtering of empty rows  
+
+### 🎨 Visual Layout Designer
+- Drag-and-drop field placement  
+- Real-time positioning on template  
+- Interactive editing  
+
+### 🔤 Advanced Typography Controls
+- Font family selection  
+- Font size adjustment  
+- Color customization  
+- Bold / Italic styling  
+- Text alignment (left, center, right)  
+
+### 📐 Accurate Rendering System
+- Coordinate scaling ensures **pixel-perfect consistency**  
+  between on-screen preview and exported certificates  
+
+### 📦 Batch Export
+- Generate one certificate per recipient  
+- Export all certificates as a single `certificates.zip`  
+- High-quality PNG output  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React 18 + TypeScript  
+- **Build Tool:** Vite 5  
+- **Styling:** Tailwind CSS  
+- **Icons:** Lucide React  
+- **Data Parsing:** PapaParse (CSV), SheetJS/xlsx (Excel)  
+- **File Generation:** JSZip + FileSaver  
+- **UI Interaction:** react-draggable  
+
+---
+
+## 📁 Project Structure
 
 ```text
 project/
@@ -66,7 +96,6 @@ project/
 │  └─ index.css
 ├─ package.json
 └─ ...
-```
 
 ## Getting Started
 
@@ -106,26 +135,35 @@ npm run preview
 npm run lint
 ```
 
-## How to Use
+### 🧑‍💻 Usage Guide
 
-1. Upload recipient data
-   - Accepted formats: CSV, XLSX, XLS
-   - Max file size: 5 MB
-   - Empty rows are filtered out automatically.
-2. Upload certificate template image
-   - Accepted formats: PNG, JPG, JPEG
-   - Max file size: 5 MB
-   - Minimum resolution: 800x600
-3. Design layout
-   - Drag a column name onto the certificate.
-   - Select a field to edit typography and alignment.
-   - Reposition fields directly on the template.
-4. Preview
-   - Choose any recipient row.
-   - Refresh preview to validate final output.
-5. Generate
-   - Creates one PNG per recipient.
-   - Downloads a `certificates.zip` file.
+### 1. Upload Recipient Data
+- Supported formats: **CSV, XLSX, XLS**
+- Max file size: **5 MB**
+- First row must contain **column headers**
+
+
+### 2. Upload Template
+- Supported formats: **PNG, JPG, JPEG**
+- Minimum resolution: **800 × 600**
+- Max file size: **5 MB**
+
+
+### 3. Design Layout
+- Drag column names onto the template  
+- Adjust position, font, and styling  
+- Fine-tune alignment and appearance  
+
+
+### 4. Preview Certificates
+- Select any recipient  
+- Validate layout before generation  
+
+
+### 5. Generate Certificates
+- Bulk generation of **PNG files**  
+- Automatic **ZIP download**  
+
 
 ## Input Data Format
 
@@ -155,18 +193,21 @@ certificate_2_Name2.png
 
 Invalid filename characters are sanitized automatically.
 
+---
 ## Browser/Runtime Behavior
 
 - All processing is client-side in the browser.
 - No backend is required.
 - Uploaded data and generated certificates are not sent to a server by this app.
-
+  
+---
 ## Known Limitations
 
 - Very large datasets may increase generation time and browser memory usage.
 - Text wrapping and multiline layout are not currently implemented.
 - If the data file has unusual encoding or malformed headers, parsing may fail.
 
+---
 ## Future Improvements
 
 - Custom output resolution and DPI
